@@ -9,7 +9,10 @@
 // @grant        none
 // ==/UserScript==
 
-alert('hello from github');
+$(document).ready(function() {
+    alert('hello from github');
+});
+
 
 waitForKeyElements = (
     selectorTxt,    /* Required: The jQuery selector string that
