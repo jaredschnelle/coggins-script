@@ -9,6 +9,8 @@
 // @grant        none
 // ==/UserScript==
 
+alert('hello from github');
+
 waitForKeyElements = (
     selectorTxt,    /* Required: The jQuery selector string that
                         specifies the desired element(s).
@@ -26,7 +28,7 @@ waitForKeyElements = (
                     */
 ) => {
     var targetNodes, btargetsFound;
-
+0
     if (typeof iframeSelector == "undefined")
         targetNodes     = $(selectorTxt);
     else
