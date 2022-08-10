@@ -1,5 +1,3 @@
-window.addEventListener("load", onPageFullyLoaded);
-
 waitForKeyElements = (
     selectorTxt,    // Required: The jQuery selector string that specifies the desired element(s).
     actionFunction, // Required: The code to run when elements are found. It is passed a jNode to the matched element.
@@ -109,7 +107,9 @@ window.openTestRecordPdf = (recordId, mode) => {
     document.testRecordForm.submit();
 };
 
-onPageFullyLoaded = () => {
+(function() {
+    'use strict';
+    
     alert('hello from github');
  
     window.waitForKeyElements('form[name=findTestChartForm]', function() {
@@ -172,4 +172,4 @@ onPageFullyLoaded = () => {
             }
         }
     }, false);
-};
+})();
