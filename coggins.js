@@ -109,8 +109,6 @@ window.openTestRecordPdf = (recordId, mode) => {
 
 (function() {
     'use strict';
-    
-    alert('hello from github');
  
     window.waitForKeyElements('form[name=findTestChartForm]', function() {
         var urlParams = new URLSearchParams(window.location.search);
