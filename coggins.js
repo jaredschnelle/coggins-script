@@ -1,4 +1,4 @@
-window.addCogginsLinks = () => {
+addCogginsLinks = () => {
     $('#chart_wrapper .dataTable tr').each(function(){
         if($(this).find('td').length === 0)
             return; 
@@ -33,7 +33,7 @@ window.addCogginsLinks = () => {
     })
 };
 
-window.openTestRecordPdf = (recordId, mode) => {
+openTestRecordPdf = (recordId, mode) => {
     document.getElementById("testRecordID").value = recordId;
     document.testRecordForm.action="labs/editTestRecord.do?quickopen=true";
     document.testRecordForm.method.value='openTestRecord';
@@ -43,13 +43,13 @@ window.openTestRecordPdf = (recordId, mode) => {
     document.testRecordForm.submit();
 };
 
-window.runCogginsScript = () => { 
+runCogginsScript = () => { 
     waitForKeyElements('form[name=findTestChartForm]', function() {
         var urlParams = new URLSearchParams(window.location.search);
 
         $('#chart').on('draw.dt', function() {
             setTimeout(() => {
-                window.addCogginsLinks();
+                addCogginsLinks();
             }, 750);
         });
     }, false);
@@ -62,7 +62,7 @@ window.runCogginsScript = () => {
         $('#listAction').val('action.add');
     }, false);
 
-    .waitForKeyElements('form[name=testRecordForm]', function() {
+    waitForKeyElements('form[name=testRecordForm]', function() {
         var urlParams = new URLSearchParams(window.location.search);
         var quickPdfOpen = urlParams.has('quickopen');
 
