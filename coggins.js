@@ -107,9 +107,7 @@ window.openTestRecordPdf = (recordId, mode) => {
     document.testRecordForm.submit();
 };
 
-(function() {
-    'use strict';
- 
+window.runCogginsScript = () => { 
     window.waitForKeyElements('form[name=findTestChartForm]', function() {
         var urlParams = new URLSearchParams(window.location.search);
 
@@ -170,4 +168,4 @@ window.openTestRecordPdf = (recordId, mode) => {
             }
         }
     }, false);
-})();
+}
